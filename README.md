@@ -34,7 +34,6 @@ Progress-Slides now supports 6 distinct aesthetics:
 - **Swiss Modern**: Bold grids, high-contrast red/white.
 - **Botanical**: Soft greens, elegant serif typography.
 - **Cyber Terminal**: CRT aesthetics, luminous green text.
-- **Cyber Terminal**: CRT aesthetics, luminous green text.
 - **Editorial**: Magazine style, premium layout and tracking.
 
 ## Live Examples
@@ -93,9 +92,3 @@ To ensure the generation is stable and follows the Skill requirements, verify th
 ## Key Concept: Output Control
 
 This Skill is not about the complexity of the HTML/CSS itself; it is about **prompt engineering for predictable output**. It demonstrates how to use the LLM as a structured renderer, converting "thought" (YAML data) into "presentation" (HTML) through a series of strict structural and stylistic boundaries.
-
-## Possible Future Extensions
-
-- **Theming**: Adding a `dark_mode: true` flag to the input YAML to toggle CSS variables.
-- **Data Visualization**: Incorporating simple CSS-only progress bars or charts.
-- **Branding**: Allowing a `logo_url` field for subtle corporate identity integration.
