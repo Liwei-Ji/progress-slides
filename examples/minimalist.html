@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progress-Deck: Project Atlas</title>
+    <title>Progress-Slides: Project Atlas</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: system-ui, -apple-system, sans-serif;
             color: #000;
@@ -18,6 +20,7 @@
             scroll-snap-type: y mandatory;
             overflow-y: scroll;
         }
+
         section {
             height: 100vh;
             width: 100vw;
@@ -28,12 +31,14 @@
             scroll-snap-align: start;
             border-bottom: 1px solid #eee;
         }
+
         h1 {
             font-size: 5rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             margin-bottom: 1rem;
         }
+
         h2 {
             font-size: 1.5rem;
             text-transform: uppercase;
@@ -42,14 +47,17 @@
             font-weight: 400;
             color: #666;
         }
+
         p {
             font-size: 3.5rem;
             font-weight: 500;
             max-width: 900px;
         }
+
         ul {
             list-style: none;
         }
+
         li {
             font-size: 2.5rem;
             font-weight: 500;
@@ -57,18 +65,29 @@
             display: flex;
             align-items: flex-start;
         }
+
         li::before {
             content: "—";
             margin-right: 1.5rem;
             color: #ccc;
         }
+
         @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            p { font-size: 2rem; }
-            li { font-size: 1.5rem; }
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+
+            li {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <section>
@@ -115,4 +134,5 @@
     </section>
 
 </body>
+
 </html>
