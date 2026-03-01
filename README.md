@@ -1,10 +1,10 @@
-# Progress-Deck
+# Progress-Slides
 
-Progress-Deck is a specialized Gemini "Skill" designed to transform structured work progress data into a minimal, modern, and professional HTML presentation. Instead of complex slide software, it leverages strict AI output control to generate a single, self-contained file optimized for quick sharing and clean aesthetics.
+Progress-Slides is a specialized Gemini "Skill" designed to transform structured work progress data into a minimal, modern, and professional HTML presentation. Instead of complex slide software, it leverages strict AI output control to generate a single, self-contained file optimized for quick sharing and clean aesthetics.
 
 ## Purpose
 
-The primary goal of Progress-Deck is to provide a stable, predictable way to visualize work status. By focusing on layout constraints and minimalist design, it ensures that the focus remains on the content while maintaining a premium "look and feel" without manual formatting.
+The primary goal of Progress-Slides is to provide a stable, predictable way to visualize work status. By focusing on layout constraints and minimalist design, it ensures that the focus remains on the content while maintaining a premium "look and feel" without manual formatting.
 
 ## File Structure
 
@@ -28,7 +28,7 @@ To generate a progress deck, follow these steps:
 
 ## Visual Styles
 
-Progress-Deck now supports 6 distinct aesthetics:
+Progress-Slides now supports 6 distinct aesthetics:
 - **Minimalist**: Clean, white background, system-ui (Standard).
 - **Dark Signal**: Indigo/Neon, tech-focused.
 - **Swiss Modern**: Bold grids, high-contrast red/white.
@@ -52,7 +52,7 @@ You can preview the 6 visual styles by opening the following HTML files in your 
 
 ## How to Use with Other AIs
 
-When you host this project on GitHub or share it with others, here is how different AI interfaces can consume the **Progress-Deck Skill**:
+When you host this project on GitHub or share it with others, here is how different AI interfaces can consume the **Progress-Slides Skill**:
 
 ### 1. Direct Chat (Gemini, Claude, ChatGPT)
 The simplest way to "install" the skill is to copy the entire content of [SKILL.md](file:///Users/akousist_xml7h/progress-deck/SKILL.md) and paste it into a new chat session.
@@ -75,7 +75,7 @@ Since the project is on GitHub, you can provide the **Raw URL** of `SKILL.md` to
 
 ## Design Philosophy
 
-Progress-Deck adheres to a "Less is More" aesthetic:
+Progress-Slides adheres to a "Less is More" aesthetic:
 - **High Contrast**: Pure white background with deep black text for maximum readability.
 - **Typography-First**: Uses system-native fonts with generous sizing and whitespace.
 - **Standardized Rhythm**: Each section is capped at one full viewport height (`100vh`), creating a focused, slide-like experience.
