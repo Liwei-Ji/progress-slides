@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Atlas | Jan 2026</title>
+    <style>
+        :root {
+            --bg: #0a0b1e;
+            --fg: #e0e6ed;
+            --accent: #00f2ff;
+            --secondary: #6366f1;
+            --font-header: 'Inter', system-ui, sans-serif;
+            --font-body: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-header);
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        section {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 8% 12%;
+            scroll-snap-align: start;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+        }
+
+        .label {
+            font-family: var(--font-body);
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 0.8rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .label::before {
+            content: ">";
+            margin-right: 0.5rem;
+            color: var(--accent);
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .period {
+            font-family: var(--font-body);
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .summary {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            line-height: 1.2;
+            max-width: 1000px;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style: none;
+            max-width: 900px;
+        }
+
+        li {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+            position: relative;
+            font-weight: 500;
+            border-left: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        li:hover {
+            border-left: 2px solid var(--accent);
+            padding-left: 3rem;
+            color: var(--accent);
+        }
+
+        /* Subtle Grid Overlay */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="label">System Status: Active</div>
+        <h1>Project Atlas</h1>
+        <div class="period">Jan 2026</div>
+    </section>
+
+    <section>
+        <div class="label">Objective</div>
+        <div class="summary">Improving onboarding flow and reducing drop-off rate.</div>
+    </section>
+
+    <section>
+        <div class="label">Deployment Log: Completed</div>
+        <ul>
+            <li>Redesigned signup page</li>
+            <li>Implemented analytics tracking</li>
+            <li>Deployed performance optimizations</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="label">Active Processes: In Progress</div>
+        <ul>
+            <li>A/B testing onboarding variants</li>
+            <li>User interview synthesis</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="label" style="color: #ff4d4d;">Warning: Blockers</div>
+        <ul>
+            <li style="border-left-color: #ff4d4d;">Waiting on API rate limit increase</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="label">Scheduled Tasks: Next</div>
+        <ul>
+            <li>Finalize experiment results</li>
+            <li>Prepare stakeholder demo</li>
+        </ul>
+    </section>
+
+</body>
+</html>

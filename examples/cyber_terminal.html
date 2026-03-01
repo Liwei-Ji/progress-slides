@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERMINAL_ACCESS: PROJECT_ATLAS</title>
+    <style>
+        :root {
+            --bg: #000000;
+            --fg: #00ff41;
+            --accent: #008f11;
+            --font-header: 'Courier New', Courier, monospace;
+            --font-body: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-body);
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+            text-shadow: 0 0 5px var(--fg);
+        }
+
+        /* Scanline Effect */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        section {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5% 10%;
+            scroll-snap-align: start;
+            border-bottom: 1px solid var(--accent);
+            position: relative;
+        }
+
+        .header-meta {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        h1 {
+            font-family: var(--font-header);
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .period {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .summary {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            line-height: 1.2;
+            max-width: 900px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            font-size: clamp(1.2rem, 3vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--fg);
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            background: var(--accent);
+            color: var(--bg);
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="header-meta">SYS_INIT // BOOT_SEQUENCE</div>
+        <h1>PROJECT ATLAS</h1>
+        <div class="period">PERIOD: JAN_2026</div>
+    </section>
+
+    <section>
+        <div class="header-meta">LOG_01 // MISSION_OBJ</div>
+        <h2>SUMMARY</h2>
+        <div class="summary">IMPROVING ONBOARDING FLOW AND REDUCING DROP-OFF RATE.</div>
+    </section>
+
+    <section>
+        <div class="header-meta">LOG_02 // SUCCESS_LOG</div>
+        <h2>COMPLETED</h2>
+        <ul>
+            <li>REDESIGNED SIGNUP PAGE</li>
+            <li>IMPLEMENTED ANALYTICS TRACKING</li>
+            <li>DEPLOYED PERFORMANCE OPTIMIZATIONS</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="header-meta">LOG_03 // ACTIVE_PROCESS</div>
+        <h2>IN_PROGRESS</h2>
+        <ul>
+            <li>A/B TESTING ONBOARDING VARIANTS</li>
+            <li>USER INTERVIEW SYNTHESIS</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="header-meta">LOG_04 // ERROR_DETECTION</div>
+        <h2 style="background: red; color: white;">BLOCKERS</h2>
+        <ul>
+            <li>WAITING ON API RATE LIMIT INCREASE</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="header-meta">LOG_05 // FUTURE_QUEUE</div>
+        <h2>NEXT_STEPS</h2>
+        <ul>
+            <li>FINALIZE EXPERIMENT RESULTS</li>
+            <li>PREPARE STAKEHOLDER DEMO</li>
+        </ul>
+    </section>
+
+</body>
+</html>

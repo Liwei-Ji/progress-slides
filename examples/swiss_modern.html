@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Report: Project Atlas</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #000000;
+            --accent: #ff0000;
+            --font-header: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-body);
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        section {
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            padding: 40px;
+            scroll-snap-align: start;
+            position: relative;
+            border-bottom: 2px solid var(--fg);
+        }
+
+        .slide-num {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .category {
+            grid-column: 1 / 13;
+            grid-row: 2 / 3;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        h1 {
+            grid-column: 1 / 12;
+            grid-row: 4 / 10;
+            font-family: var(--font-header);
+            font-size: clamp(4rem, 12vw, 10rem);
+            font-weight: 900;
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+        }
+
+        .period-box {
+            grid-column: 1 / 4;
+            grid-row: 11 / 13;
+            border-top: 10px solid var(--fg);
+            padding-top: 20px;
+            font-weight: 900;
+            font-size: 2rem;
+        }
+
+        .summary-text {
+            grid-column: 1 / 11;
+            grid-row: 4 / 10;
+            font-size: clamp(2rem, 5vw, 5rem);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        ul {
+            grid-column: 1 / 12;
+            grid-row: 4 / 12;
+            list-style: none;
+        }
+
+        li {
+            font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            border-bottom: 5px solid var(--fg);
+            padding-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            section { padding: 20px; }
+            h1 { grid-row: 3 / 9; }
+            .summary-text { grid-row: 3 / 9; }
+        }
+
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="slide-num">01</div>
+        <div class="category">Project Identity</div>
+        <h1>Project<br>Atlas</h1>
+        <div class="period-box">JAN 2026</div>
+    </section>
+
+    <section>
+        <div class="slide-num">02</div>
+        <div class="category">Mission Statement</div>
+        <div class="summary-text">IMPROVING ONBOARDING FLOW AND REDUCING DROP-OFF RATE.</div>
+    </section>
+
+    <section>
+        <div class="slide-num">03</div>
+        <div class="category">Status: Completed</div>
+        <ul>
+            <li>Redesigned signup page</li>
+            <li>Implemented analytics tracking</li>
+            <li>Deployed performance optimizations</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="slide-num">04</div>
+        <div class="category">Status: In Progress</div>
+        <ul>
+            <li>A/B testing onboarding variants</li>
+            <li>User interview synthesis</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="slide-num">05</div>
+        <div class="category" style="background-color: #000;">Critical Blockers</div>
+        <ul>
+            <li style="color: var(--accent);">Waiting on API rate limit increase</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="slide-num">06</div>
+        <div class="category">Forward Path</div>
+        <ul>
+            <li>Finalize experiment results</li>
+            <li>Prepare stakeholder demo</li>
+        </ul>
+    </section>
+
+</body>
+</html>```
