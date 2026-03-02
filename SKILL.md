@@ -29,7 +29,7 @@ Generate a single self-contained HTML file for a progress presentation based on 
 - selected_style (one of the 6 above)
 
 # Generation Requirements
-- Exactly 6 slides using <section> tags.
+- Dynamic slide count using `<section>` tags. Generate as many slides as needed to present the content clearly (standardly 4-8 sections).
 - Full viewport height for each slide (100vh).
 - No external CSS or JS.
 - No explanations outside the HTML block.

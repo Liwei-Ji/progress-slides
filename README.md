@@ -84,7 +84,7 @@ Progress-Slides adheres to a "Less is More" aesthetic:
 
 To ensure the generation is stable and follows the Skill requirements, verify the following:
 - [ ] The output is a single `<html>` block with no conversational filler.
-- [ ] There are exactly 6 `<section>` tags.
+- [ ] The slides use `<section>` tags for each slide.
 - [ ] The font-family is set to `system-ui`.
 - [ ] No external URLs or CDNs are referenced in the `<head>`.
 - [ ] Each slide is vertically and horizontally centered.
